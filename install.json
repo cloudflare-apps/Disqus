@@ -1,0 +1,28 @@
+{
+  "resources": {
+    "body": [
+      {
+        "type": "script",
+        "src": "./disqus.js"
+      },
+      {
+        "type": "script",
+        "contents": "EagerDisqus.init(Eager.createElement(EAGER_OPTIONS.location), EAGER_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "disqusShortName": {
+        "title": "Disqus short name",
+        "description": "Get this from the Disqus Universal Code (Available at https://disqus.com/admin/settings/universalcode)",
+        "type": "string"
+      },
+      "location": {
+        "title": "Location",
+        "type": "object",
+        "format": "element"
+      }
+    }
+  }
+}

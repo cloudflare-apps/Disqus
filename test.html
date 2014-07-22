@@ -1,0 +1,12 @@
+<body>
+  <eager-app></eager-app>
+  <script src="eager-disqus.js"></script>
+  <script>
+    EagerDisqus.init(document.querySelector('eager-app'), {
+      "location": {
+        "selector": "body",
+        "method": "append"
+      },
+      "disqusShortName": "eager-example-site"
+    });
+  </script>
