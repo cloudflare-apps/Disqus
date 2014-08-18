@@ -7,7 +7,7 @@
       },
       {
         "type": "script",
-        "contents": "EagerDisqus.init(Eager.createElement(EAGER_OPTIONS.location), EAGER_OPTIONS)"
+        "contents": "EagerDisqus.init(Eager.createElement(INSTALL_OPTIONS.location), INSTALL_OPTIONS)"
       }
     ]
   },
