@@ -14,6 +14,7 @@
   "options": {
     "properties": {
       "account": {
+        "title": "Account",
         "type": "object",
         "format": "account",
         "oauth": {
