@@ -14,15 +14,15 @@
   "options": {
     "properties": {
       "account": {
-        type: "object",
-        format: "account",
-        oauth: {
-          authEndpoint: "https://disqus.com/api/oauth/2.0/authorize",
-          scopes: ["read", "write", "manage"],
-          clientId: "tfpc61RCBTsDyOH1xg8fIXmssxvpYqKLNizg83rB9KtkzBZdgwCYS97JgldNnLL7"
+        "type": "object",
+        "format": "account",
+        "oauth": {
+          "authEndpoint": "https://disqus.com/api/oauth/2.0/authorize",
+          "scopes": ["read", "write", "manage"],
+          "clientId": "tfpc61RCBTsDyOH1xg8fIXmssxvpYqKLNizg83rB9KtkzBZdgwCYS97JgldNnLL7"
         },
-        required: false,
-        managed: true
+        "required": false,
+        "managed": true
       },
       "disqusShortName": {
         "title": "Disqus short name",
