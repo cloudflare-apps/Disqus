@@ -13,22 +13,17 @@
   },
   "options": {
     "properties": {
-      "x": {
+      "account": {
+        "title": "Disqus Account",
         "type": "object",
-        "properties":  {
-          "account": {
-            "title": "Disqus Account",
-            "type": "object",
-            "format": "account",
-            "oauth": {
-              "authEndpoint": "https://disqus.com/api/oauth/2.0/authorize",
-              "scopes": ["read", "write"],
-              "clientId": "tfpc61RCBTsDyOH1xg8fIXmssxvpYqKLNizg83rB9KtkzBZdgwCYS97JgldNnLL7"
-            },
-            "required": false,
-            "managed": true
-          }
-        }
+        "format": "account",
+        "oauth": {
+          "authEndpoint": "https://disqus.com/api/oauth/2.0/authorize",
+          "scopes": ["read", "write"],
+          "clientId": "tfpc61RCBTsDyOH1xg8fIXmssxvpYqKLNizg83rB9KtkzBZdgwCYS97JgldNnLL7"
+        },
+        "required": false,
+        "managed": true
       },
       "disqusShortName": {
         "title": "Disqus short name",
