@@ -36,5 +36,11 @@
         "format": "element"
       }
     }
-  }
+  },
+  "hooks": [
+    {
+      "endpoint": "https://provisioner.eager.io/disqus/hook",
+      "events": ["oauth-login", "provision"]
+    }
+  ]
 }
