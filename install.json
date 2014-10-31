@@ -25,11 +25,6 @@
         "required": false,
         "managed": true
       },
-      "disqusShortName": {
-        "title": "Disqus short name",
-        "description": "Get this from the Disqus Universal Code (Available at https://disqus.com/admin/settings/universalcode)",
-        "type": "string"
-      },
       "location": {
         "title": "Location",
         "type": "object",
