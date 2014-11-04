@@ -25,6 +25,10 @@
         "required": false,
         "managed": true
       },
+      "disqusShortName": {
+        "title": "Forum Short Name",
+        "type": "string"
+      }
       "location": {
         "title": "Location",
         "type": "object",
