@@ -17,6 +17,7 @@
         "title": "Disqus Account",
         "type": "object",
         "format": "account",
+        "order": 0,
         "oauth": {
           "authEndpoint": "https://disqus.com/api/oauth/2.0/authorize",
           "scopes": ["read", "write"],
@@ -27,12 +28,14 @@
       },
       "disqusShortName": {
         "title": "Forum Short Name",
-        "type": "string"
+        "type": "string",
+        "order": 1
       },
       "location": {
         "title": "Location",
         "type": "object",
-        "format": "element"
+        "format": "element",
+        "order": 10
       }
     }
   },
