@@ -42,7 +42,7 @@
   "hooks": [
     {
       "endpoint": "http://provisioner.eager.io/disqus/hook",
-      "events": ["oauth-login", "provision", "option-change"]
+      "events": ["oauth-login", "provision", "option-change", "preview"]
     }
   ]
 }
