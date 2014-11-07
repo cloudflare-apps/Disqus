@@ -20,7 +20,7 @@
         "order": 0,
         "oauth": {
           "authEndpoint": "https://disqus.com/api/oauth/2.0/authorize",
-          "scopes": ["read", "write"],
+          "scopes": ["read", "write", "admin"],
           "clientId": "tfpc61RCBTsDyOH1xg8fIXmssxvpYqKLNizg83rB9KtkzBZdgwCYS97JgldNnLL7"
         },
         "required": false,
