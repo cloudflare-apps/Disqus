@@ -43,7 +43,12 @@
   "hooks": [
     {
       "endpoint": "http://provisioner.eager.io/disqus/hook",
-      "events": ["oauth-login", "provision", "option-change", "preview"]
+      "events": ["oauth-login", "provision", "option-change", "preview"],
+      "block": true,
+      "failure": {
+        "action": "notify",
+        "message": "There was an error communicating with Disqus."
+      }
     }
   ]
 }
