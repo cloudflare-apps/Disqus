@@ -24,7 +24,15 @@
           "clientId": "tfpc61RCBTsDyOH1xg8fIXmssxvpYqKLNizg83rB9KtkzBZdgwCYS97JgldNnLL7"
         },
         "required": false,
-        "managed": true
+        "managed": true,
+        "add": {
+          "description": "We will create a Disqus account for you, and allow you to manage it through Eager.",
+          "email": {
+            "title": "Email Address",
+            "description": "Which email address would you like to associate with this account? (provided to Disqus)",
+            "type": "string"
+          }
+        }
       },
       "disqusShortName": {
         "title": "Forum",
