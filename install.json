@@ -29,10 +29,9 @@
       "disqusShortName": {
         "title": "Forum",
         "type": "string",
-        "description": "Login above to see a list of your existing forums, or create a new one.  If you don’t wish to login, you can, enter your existing shortname here.",
+        "description": "Login above to see a list of your existing forums or create a new one.  If you don’t wish to login you can enter your existing shortname here.",
         "order": 1,
         "add": {
-          "allow": true,
           "description": "Enter the name for your new Disqus forum",
           "properties": {
             "name": {
