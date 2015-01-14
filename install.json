@@ -13,16 +13,61 @@
   },
   "options": {
     "properties": {
+      "account": {
+        "title": "Disqus Account",
+        "type": "object",
+        "format": "account",
+        "order": 0,
+        "oauth": {
+          "authEndpoint": "https://disqus.com/api/oauth/2.0/authorize",
+          "scopes": ["read", "write", "admin"],
+          "clientId": "tfpc61RCBTsDyOH1xg8fIXmssxvpYqKLNizg83rB9KtkzBZdgwCYS97JgldNnLL7"
+        },
+        "required": false,
+        "managed": true,
+        "add": {
+          "description": "We will create a Disqus account for you, and allow you to manage it through Eager.",
+          "properties": {
+            "email": {
+              "title": "Email Address",
+              "description": "Which email address would you like to associate with this account? (provided to Disqus)",
+              "type": "string"
+            }
+          }
+        }
+      },
       "disqusShortName": {
-        "title": "Disqus short name",
-        "description": "Get this from the Disqus Universal Code (Available at https://disqus.com/admin/settings/universalcode)",
-        "type": "string"
+        "title": "Forum",
+        "type": "string",
+        "description": "Login above to see a list of your existing forums or create a new one.  If you don’t wish to login you can enter your existing shortname here.",
+        "order": 1,
+        "add": {
+          "description": "Enter the name for your new Disqus forum",
+          "properties": {
+            "name": {
+              "title": "Forum Name",
+              "type": "string"
+            }
+          }
+        }
       },
       "location": {
         "title": "Location",
         "type": "object",
-        "format": "element"
+        "format": "element",
+        "order": 10
       }
     }
-  }
+  },
+  "hooks": [
+    {
+      "endpoint": "http://provisioner.eager.io/disqus/hook",
+      "events": ["oauth-login", "provision", "account-logout", "preview", "item-add"],
+      "block": true,
+      "failure": {
+        "action": "notify",
+        "message": "There was an error communicating with Disqus."
+      }
+    }
+  ]
 }
