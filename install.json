@@ -18,13 +18,13 @@
         "type": "object",
         "format": "account",
         "order": 0,
+        "description": "Log in with your Disqus account to choose from a list of your forums. If you’d prefer, you can alternatively enter a forum shortname below.",
         "oauth": {
           "authEndpoint": "https://disqus.com/api/oauth/2.0/authorize",
           "scopes": ["read", "write", "admin"],
           "clientId": "tfpc61RCBTsDyOH1xg8fIXmssxvpYqKLNizg83rB9KtkzBZdgwCYS97JgldNnLL7"
         },
-        "required": false,
-        "managed": false
+        "required": false
       },
       "disqusShortName": {
         "title": "Forum",
