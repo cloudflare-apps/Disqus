@@ -1,6 +1,6 @@
 window.EagerDisqus = {
   init: function(element, options) {
-    if (!element) return;
+    if (!element.parentNode) return;
 
     options.disqusShortName = options.disqusShortName || 'eager-demo';
 
