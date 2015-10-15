@@ -1,9 +1,8 @@
 window.EagerDisqus = {
   init: function(element, options) {
-    if (!element) return;
-    if (options.disqusShortName === '--new--') return;
-    
-    options.disqusShortName = options.disqusShortName || '';
+    if (!element.parentNode) return;
+
+    options.disqusShortName = options.disqusShortName || 'eager-demo';
 
     element.innerHTML = '' +
       '<div id="disqus_thread"></div>' +
