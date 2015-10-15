@@ -17,24 +17,9 @@
         "title": "Disqus Account",
         "type": "object",
         "format": "account",
+        "services": ["discus"],
         "order": 0,
-        "oauth": {
-          "authEndpoint": "https://disqus.com/api/oauth/2.0/authorize",
-          "scopes": ["read", "write", "admin"],
-          "clientId": "tfpc61RCBTsDyOH1xg8fIXmssxvpYqKLNizg83rB9KtkzBZdgwCYS97JgldNnLL7"
-        },
-        "required": false,
-        "managed": true,
-        "add": {
-          "description": "We will create a Disqus account for you, and allow you to manage it through Eager.",
-          "properties": {
-            "email": {
-              "title": "Email Address",
-              "description": "Which email address would you like to associate with this account? (provided to Disqus)",
-              "type": "string"
-            }
-          }
-        }
+        "required": false
       },
       "disqusShortName": {
         "title": "Forum",
@@ -61,13 +46,18 @@
   },
   "hooks": [
     {
-      "endpoint": "http://provisioner.eager.io/disqus/hook",
-      "events": ["oauth-login", "provision", "account-logout", "preview", "item-add"],
+      "endpoint": "http://provisioner.eager.io/disqus/v2/hook",
+      "events": ["option-change:account", "preview", "item-add"],
       "block": true,
+      "authenticate": ["account"],
       "failure": {
         "action": "notify",
         "message": "There was an error communicating with Disqus."
       }
+    },
+    {
+      "events": ["account-logout"],
+      "action": "reset-schema"
     }
   ]
 }
