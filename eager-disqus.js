@@ -2,7 +2,14 @@ window.EagerDisqus = {
   init: function(element, options) {
     if (!element.parentNode) return;
 
-    options.disqusShortName = options.disqusShortName || 'eager-demo';
+    var isPreview = INSTALL_ID === 'preview';
+
+    if (!options.disqusShortName){
+      if (isPreview)
+        options.disqusShortName = 'eagerpreview';
+      else
+        return;
+    }
 
     element.innerHTML = '' +
       '<div id="disqus_thread"></div>' +
